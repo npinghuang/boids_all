@@ -1,0 +1,21 @@
+<launch>
+	<!-- <node ns="cam_R" pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/> -->
+	<!-- <include file="$(find usb_cam)/launch/usb_cam_rect.launch" /> -->
+    <include file="$(find usb_cam)/launch/usb_cam_boids.launch">
+  </include>
+    <node ns="cam_R" pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>  
+
+    <!-- detect aruco markers -->
+    <!-- <node ns="cam_R" pkg="nodelet" clear_params="true" type="nodelet" name="aruco_detect" args="load aruco_pose/aruco_detect nodelet_manager">
+        <remap from="image_raw" to="/cam_R/usb_cam/image_rect"/> 
+        <remap from="camera_info" to="/cam_R/usb_cam/camera_info"/>
+        <param name="length" value="0.7"/>
+    </node> -->
+    <node ns="cam_R" pkg="nodelet" type="nodelet" name="image_proc_fisheye" args="load image_proc_fisheye/RectifyNodelet camera_nodelet_manager" output="screen">
+        <remap from="camera_info" to="/cam_R/usb_cam/camera_info" />
+        <remap from="image_raw" to="/cam_R/usb_cam/image_raw" />
+        <remap from="image_rect" to="/cam_R/usb_cam/image_rect" />
+  </node>
+    <node pkg="aruco_pose" type="mapping_class" name="mapping_class" args="manager"/>   
+ 
+</launch>

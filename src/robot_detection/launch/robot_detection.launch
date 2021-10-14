@@ -1,0 +1,21 @@
+<launch>
+	<!-- <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/> -->
+
+	<include file="$(find aruco_pose)/launch/CupAndAruco.launch" >
+	<!-- <include file="$(find aruco_pose)/launch/usb_single.launch" > -->
+    </include>
+	<!-- <node  ns="usb_cam" pkg="image_proc" type="image_proc" name="image_proc" />
+    <node pkg="image_view" type="image_view" name="image_view" >
+      <remap from="image" to="usb_cam/image_rect_color" />
+    </node> -->
+      <!-- nodelet manager from image stream -->
+  <node name="robot_pose" pkg="robot_detection"  type="robot_pose"  />
+	<node name="robot_velocity" pkg="robot_detection" type="robot_velocity" />
+  <!-- <node pkg="nodelet" type="nodelet" name="camera_nodelet_manager"  args="manager" /> -->
+  <!-- <node pkg="nodelet" type="nodelet" name="image_proc_fisheye" args="load image_proc_fisheye/RectifyNodelet nodelet_manager" output="screen">
+    <remap from="camera_info" to="/usb_cam/camera_info" />
+    <remap from="image_raw" to="/usb_cam/image_raw" />
+    <remap from="image_rect" to="/usb_cam/image_rect" />
+  </node>
+	 -->
+</launch>

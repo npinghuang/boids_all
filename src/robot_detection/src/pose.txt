@@ -1,0 +1,171 @@
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/usb_cam/image_raw camera:=/usb_cam
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/dev/video1/image_raw camera:=/dev/video1
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/dev/video2/image_raw camera:=/dev/video2 --no-service-check
+
+	 rosrun aruco_ros single   _marker_id:=0  _marker_size:=0.10 _marker_frame:=/aruco_frame _camera_frame:=/xtion_rgb_optical_frame _image_is_rectified:=true _reference_frame:=/base_footprint
+
+1
+sudo apt-get install ros-melodic-usb-cam ros-melodic-aruco-ros
+/dev/video1
+
+    ATTRS{idProduct}=="9210"
+    ATTRS{idVendor}=="32e4"
+SUBSYSTEMS=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="32e4", ATTRS{idProduct}=="9210", MODE="0666"
+[ INFO] [1622215744.247533482]: number of markers : [2]
+[ INFO] [1622215744.247543166]: I heard marker: [1], [-0.023049]
+[ INFO] [1622215744.247549984]: id [1], x : [-0.023049]
+[ INFO] [1622215744.247559666]: yaw1 : [-0.068399]
+[ INFO] [1622215744.247565589]: id [0], x : [-0.074152]
+[ INFO] [1622215744.247573285]: yaw0 : [3.079002]
+[ INFO] [1622215744.347501851]: sub
+[ INFO] [1622215744.347526287]: number of markers : [2]
+[ INFO] [1622215744.347536057]: I heard marker: [1], [-0.025932]
+[ INFO] [1622215744.347542603]: id [1], x : [-0.025932]
+[ INFO] [1622215744.347551593]: yaw1 : [-0.070858]
+[ INFO] [1622215744.347557636]: id [0], x : [-0.076284]
+[ INFO] [1622215744.347566406]: yaw0 : [3.081890]
+
+[ INFO] [1622216292.821585554]: number of markers : [3]
+[ INFO] [1622216292.821644344]: yaw [3] : [1.222704]
+[ INFO] [1622216292.821657231]: yaw [4] : [-0.029339]
+[ INFO] [1622216292.821674023]: yaw [0] : [1.183686]
+
+[ INFO] [1622216441.005775411]: number of markers : [3]
+[ INFO] [1622216441.005804271]: yaw [3] : [-0.131174]
+[ INFO] [1622216441.005817473]: yaw [2] : [1.072727]
+[ INFO] [1622216441.005823959]: yaw [0] : [-0.091008]
+[ INFO] [1622216441.005853194]: -------------
+[ INFO] [1622216441.095750222]: number of markers : [3]
+[ INFO] [1622216441.095800267]: yaw [2] : [1.081957]
+[ INFO] [1622216441.095809290]: yaw [0] : [-0.085395]
+[ INFO] [1622216441.095819987]: yaw [3] : [-0.127108]
+[ INFO] [1622216441.095825499]: -------------
+[ INFO] [1622216441.205780970]: number of markers : [3]
+[ INFO] [1622216441.205835163]: yaw [0] : [-0.081353]
+[ INFO] [1622216441.205844750]: yaw [2] : [1.100933]
+[ INFO] [1622216441.205851443]: yaw [3] : [-0.116751]
+[ INFO] [1622216441.205856606]: -------------
+[ INFO] [1622216441.305745811]: number of markers : [3]
+[ INFO] [1622216441.305811977]: yaw [2] : [1.115771]
+[ INFO] [1622216441.305830233]: yaw [3] : [-0.117180]
+[ INFO] [1622216441.305868135]: yaw [0] : [-0.078698]
+[ INFO] [1622216441.305898343]: -------------
+[ INFO] [1622216441.405769007]: number of markers : [3]
+[ INFO] [1622216441.405844419]: yaw [0] : [-0.078006]
+[ INFO] [1622216441.405861281]: yaw [3] : [-0.114282]
+[ INFO] [1622216441.405877499]: yaw [2] : [1.118826]
+
+  id: 2
+    pose: 
+      position: 
+        x: 1.22017642848
+        y: 1.05402454047
+        z: 4.90722385832
+      orientation: 
+        x: -0.922999888527
+        y: -0.0239718279032
+        z: -0.343524676229
+        w: 0.171718822698
+  - 
+    id: 1
+    pose: 
+      position: 
+        x: 0.70190204989
+        y: 0.964734244943
+        z: 4.91673026971
+      orientation: 
+        x: -0.88699754155
+        y: -0.13326127254
+        z: 0.42742054394
+        w: 0.113086131523
+  - 
+    id: 0
+    pose: 
+      position: 
+        x: 1.07628259658
+        y: 0.586564800449
+        z: 5.28345875042
+      orientation: 
+        x: 0.396642510837
+        y: -0.689377279345
+        z: 0.576464892182
+        w: 0.187408413369
+
+
+
+
+id: 2
+    length: 0.699999988079
+    pose: 
+      position: 
+        x: 1.22017642848
+        y: 1.05402454047
+        z: 4.90722385832
+      orientation: 
+        x: -0.922999888527
+        y: -0.0239718279032
+        z: -0.343524676229
+        w: 0.171718822698
+    c1: 
+      x: 736.0
+      y: 421.0
+    c2: 
+      x: 861.0
+      y: 384.0
+    c3: 
+      x: 809.0
+      y: 556.0
+    c4: 
+      x: 681.0
+      y: 613.0
+  - 
+    id: 1
+    length: 0.699999988079
+    pose: 
+      position: 
+        x: 0.70190204989
+        y: 0.964734244943
+        z: 4.91673026971
+      orientation: 
+        x: -0.88699754155
+        y: -0.13326127254
+        z: 0.42742054394
+        w: 0.113086131523
+    c1: 
+      x: 571.0
+      y: 337.0
+    c2: 
+      x: 722.0
+      y: 424.0
+    c3: 
+      x: 672.0
+      y: 614.0
+    c4: 
+      x: 537.0
+      y: 511.0
+  - 
+    id: 0
+    length: 0.699999988079
+    pose: 
+      position: 
+        x: 1.07628259658
+        y: 0.586564800449
+        z: 5.28345875042
+      orientation: 
+        x: 0.396642510837
+        y: -0.689377279345
+        z: 0.576464892182
+        w: 0.187408413369
+    c1: 
+      x: 726.0
+      y: 400.0
+    c2: 
+      x: 578.0
+      y: 316.0
+    c3: 
+      x: 704.0
+      y: 302.0
+    c4: 
+      x: 845.0
+      y: 371.0
+---

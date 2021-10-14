@@ -1,0 +1,19 @@
+<launch>
+<node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>
+<!-- <node ns="node1" pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/> -->
+<!-- </node> -->
+    <!-- camera node -->
+  <!-- <include file="$(find usb_cam)/launch/usb_cam_boids.launch">
+  </include> -->
+   <!-- nodelet manager from image stream -->
+  <!-- <node name="image_proc" pkg="image_proc" type="image_proc" ns="usb_cam">
+  </node> -->
+    <!-- detect aruco markers -->
+    
+  <node  pkg="nodelet" clear_params="true" type="nodelet" name="aruco_detect" args="load aruco_pose/aruco_detect nodelet_manager">
+        <remap from="image_raw" to="/usb_cam/image_raw"/>
+        <remap from="camera_info" to="/usb_cam/camera_info"/>
+        <param name="length" value="0.602"/>
+    </node>
+
+</launch>

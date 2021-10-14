@@ -1,0 +1,6 @@
+calibration:
+1. transform_multi.py
+(2. check R,t matrix file in cfg)
+3. rosrun mapping_class.cpp to check result
+ 
+
